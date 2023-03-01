@@ -3,6 +3,6 @@
 # See the latter for an explanation.
 # 
 # Names should be added to this file as:
-# Name or Organization <justprincedesign@gmail.com>
+# Stefie Justprince <justprincedesign@gmail.com>
 
-Fearless Lei <replayfonts@gmail.com>
+Stefie Justprince <replayfonts@gmail.com>
