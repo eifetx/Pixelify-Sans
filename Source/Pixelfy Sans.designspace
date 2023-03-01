@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<designspace format="4.0">
+ <axes>
+  <axis minimum="400" default="400" tag="wght" name="weight" maximum="900">
+   <labelname xml:lang="en">Weight</labelname>
+  </axis>
+ </axes>
+ <sources>
+  <source stylename="Black" familyname="Pixelify Sans" name="Black" filename="masters/PixelifySans-Black.ufo">
+   <location>
+    <dimension name="weight" xvalue="900"/>
+   </location>
+  </source>
+  <source stylename="Normal" familyname="Pixelify Sans" name="Regular" filename="masters/PixelifySans-Regular.ufo">
+   <lib copy="1"/>
+   <groups copy="1"/>
+   <info copy="1"/>
+   <features copy="1"/>
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </source>
+ </sources>
+ <instances>
+  <instance stylename="Regular" familyname="Pixelify Sans" name="Regular" filename="instances/PixelifySans-Regular.ufo">
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </instance>
+  <instance stylename="Medium" familyname="Pixelify Sans" name="Medium" filename="instances/PixelifySans-Medium.ufo">
+   <location>
+    <dimension name="weight" xvalue="500"/>
+   </location>
+  </instance>
+  <instance stylename="Semi Bold" familyname="Pixelify Sans" name="SemiBold" filename="instances/PixelifySans-SemiBold.ufo">
+   <location>
+    <dimension name="weight" xvalue="600"/>
+   </location>
+  </instance>
+  <instance stylename="Bold" familyname="Pixelify Sans" name="Bold" filename="instances/PixelifySans-Bold.ufo">
+   <location>
+    <dimension name="weight" xvalue="700"/>
+   </location>
+  </instance>
+  <instance stylename="Extra Bold" familyname="Pixelify Sans" name="ExtraBold" filename="instances/PixelifySans-ExtraBold.ufo">
+   <location>
+    <dimension name="weight" xvalue="800"/>
+   </location>
+  </instance>
+  <instance stylename="Black" familyname="Pixelify Sans" name="Black" filename="instances/PixelifySans-Black.ufo">
+   <location>
+    <dimension name="weight" xvalue="900"/>
+   </location>
+  </instance>
+ </instances>
+</designspace>
