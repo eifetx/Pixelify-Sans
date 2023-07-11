@@ -9,7 +9,7 @@ In addition to being aesthetically pleasing, our Pixel Font product is also high
 
 Overall, my Pixel Font product is a versatile and powerful tool for any designer, developer, or creative professional who wants to add a unique and distinctive typographic style to their digital projects. With its combination of style, functionality, and flexibility, our Pixel Font product is a must-have for any digital media toolkit.
 ## ***Acknowledgements***
-Designed by Stefie Justprince / Eifetstype
+Designed by Stefie Justprince / Typecalism Foundryline
 
 ## ***Versions***
 V 1.000
