@@ -8,3 +8,13 @@ My Pixel Font product includes a wide range of styles, from classic 8-bit design
 In addition to being aesthetically pleasing, our Pixel Font product is also highly functional. Each font is optimized for screen use, ensuring that it is easy to read on any device or platform. And with a wide range of character sets and language support, our Pixel Font product is ideal for projects that require internationalization or multilingual support.
 
 Overall, my Pixel Font product is a versatile and powerful tool for any designer, developer, or creative professional who wants to add a unique and distinctive typographic style to their digital projects. With its combination of style, functionality, and flexibility, our Pixel Font product is a must-have for any digital media toolkit.
+## ***Acknowledgements***
+Designed by Stefie Justprince / Eifetstype
+
+## ***Versions***
+V 1.000
+
+v 1.001 Fix diacritics, fix compose Glyph, fix slash Oslash oslash 
+
+## ***License***
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
