@@ -1,6 +1,9 @@
 {
 .appVersion = "3214";
 .formatVersion = 3;
+DisplayStrings = (
+"̦̒"
+);
 axes = (
 {
 name = Weight;
@@ -22,135 +25,86 @@ date = "2023-09-07 12:27:28 +0000";
 familyName = "Pixelify Sans";
 featurePrefixes = (
 {
-code = "#> languagesystem
-languagesystem DFLT dflt;
+automatic = 1;
+code = "languagesystem DFLT dflt;
+
 languagesystem latn dflt;
 languagesystem latn AZE;
-languagesystem latn CAT;
 languagesystem latn CRT;
 languagesystem latn KAZ;
-languagesystem latn MOL;
-languagesystem latn ROM;
 languagesystem latn TAT;
 languagesystem latn TRK;
-languagesystem cyrl dflt;
-languagesystem grek dflt;
-#< languagesystem
-
-
-
-languagesystem latn dflt;
-languagesystem latn MOL;
 languagesystem latn ROM;
-
+languagesystem latn MOL;
+languagesystem latn CAT;
 ";
-name = xxxx;
+name = Languagesystems;
 }
 );
 features = (
 {
-code = "# Access All Alternates
-
-#> feature
-  feature sups;
-  feature locl;
-#< feature";
+automatic = 1;
+code = "feature locl;
+feature subs;
+feature sinf;
+feature sups;
+feature frac;
+feature ordn;
+feature case;
+";
 tag = aalt;
 },
 {
-code = "# Superscript
-
-#> feature
-  sub eight by eightsuperior;
-  sub five by fivesuperior;
-  sub four by foursuperior;
-  sub nine by ninesuperior;
-  sub one by onesuperior;
-  sub seven by sevensuperior;
-  sub six by sixsuperior;
-  sub three by threesuperior;
-  sub two by twosuperior;
-  sub zero by zerosuperior;
-#< feature";
-tag = sups;
-},
-{
-code = "# Ordinals
-
-#> feature
-  sub N o period by afii61352;
-#< feature";
-tag = ordn;
-},
-{
-code = "# Localized Forms
-
-#> feature
-  script latn; # Latin
-  language MOL; # Moldavian
-  sub Scedilla by Scommaaccent;
-  sub scedilla by scommaaccent;
-
-  language ROM; # Romanian
-  sub Scedilla by Scommaaccent;
-  sub scedilla by scommaaccent;
-#< feature";
-tag = locl;
-},
-{
-code = "# Standard Ligatures
-
-#> feature
-  sub f i by fi;
-  sub f l by fl;
-#< feature";
-tag = liga;
-},
-{
-code = "# Fractions
-
-#> feature
-lookup frac_precomposed {
-
-  sub one slash four by onequarter;
-  sub one slash two by onehalf;
-  sub three slash four by threequarters;
-  sub one slash three by onethird;
-  sub two slash three by twothirds;
-  sub one slash eight by oneeighth;
-  sub three slash eight by threeeighths;
-  sub five slash eight by fiveeighths;
-  sub seven slash eight by seveneighths;
-} frac_precomposed;
-#< feature";
-tag = frac;
-},
-{
-code = "# Discretionary Ligatures
-
-#> feature
-  sub s t by s_t;
-#< feature";
-tag = dlig;
-},
-{
-code = "lookup ccmp_Other_1 {
-	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
-	lookupflag UseMarkFilteringSet @CombiningTopAccents;
-	sub j' @CombiningTopAccents by jdotless;
-} ccmp_Other_1;
-
-lookup ccmp_latn_1 {
+automatic = 1;
+code = "lookup ccmp_latn_1 {
 	sub fi by f i;
 	sub fl by f l;
 	sub Ldot by L periodcentered.loclCAT.case;
 } ccmp_latn_1;
 
 script latn;
-lookup ccmp_latn_1;";
+lookup ccmp_latn_1;
+";
 tag = ccmp;
 },
 {
+automatic = 1;
+code = "script latn;
+language AZE;
+lookup locl_latn_0 {
+	sub i by idotaccent;
+} locl_latn_0;
+language CRT;
+lookup locl_latn_0;
+language KAZ;
+lookup locl_latn_0;
+language TAT;
+lookup locl_latn_0;
+language TRK;
+lookup locl_latn_0;
+
+script latn;
+language ROM;
+lookup locl_latn_1 {
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_1;
+language MOL;
+lookup locl_latn_1;
+
+script latn;
+language CAT;
+lookup locl_latn_2 {
+	sub l periodcentered' l by periodcentered.loclCAT;
+	sub L periodcentered' L by periodcentered.loclCAT.case;
+} locl_latn_2;
+";
+tag = locl;
+},
+{
+automatic = 1;
 code = "sub zero by zeroinferior;
 sub one by oneinferior;
 sub two by twoinferior;
@@ -160,10 +114,12 @@ sub five by fiveinferior;
 sub six by sixinferior;
 sub seven by seveninferior;
 sub eight by eightinferior;
-sub nine by nineinferior;";
+sub nine by nineinferior;
+";
 tag = subs;
 },
 {
+automatic = 1;
 code = "sub zero by zeroinferior;
 sub one by oneinferior;
 sub two by twoinferior;
@@ -173,1371 +129,66 @@ sub five by fiveinferior;
 sub six by sixinferior;
 sub seven by seveninferior;
 sub eight by eightinferior;
-sub nine by nineinferior;";
+sub nine by nineinferior;
+";
 tag = sinf;
 },
 {
-code = "sub periodcentered.loclCAT by periodcentered.loclCAT.case;";
+automatic = 1;
+code = "sub zero by zerosuperior;
+sub one by onesuperior;
+sub two by twosuperior;
+sub three by threesuperior;
+sub four by foursuperior;
+sub five by fivesuperior;
+sub six by sixsuperior;
+sub seven by sevensuperior;
+sub eight by eightsuperior;
+sub nine by ninesuperior;
+";
+tag = sups;
+},
+{
+automatic = 1;
+code = "sub one slash eight by oneeighth;
+sub one slash four by onequarter;
+sub three slash eight by threeeighths;
+sub one slash two by onehalf;
+sub five slash eight by fiveeighths;
+sub three slash four by threequarters;
+sub seven slash eight by seveneighths;
+sub one slash three by onethird;
+sub two slash three by twothirds;
+";
+tag = frac;
+},
+{
+automatic = 1;
+code = "sub [zero one two three four five six seven eight nine] [A a]' by ordfeminine;
+sub [zero one two three four five six seven eight nine] [O o]' by ordmasculine;
+";
+tag = ordn;
+},
+{
+automatic = 1;
+code = "sub periodcentered.loclCAT by periodcentered.loclCAT.case;
+";
 tag = case;
 },
 {
-code = "# Stylistic Alternates
-
-#> feature
-  sub caroncomb from [caroncomb.alt];
-#< feature";
-tag = salt;
+automatic = 1;
+code = "lookupflag IgnoreMarks;
+sub s t by s_t;
+";
+tag = dlig;
 },
 {
-code = "  @_L__A1 = [A Aogonek];
-  @_L__B1 = [B eight three];
-  @_L__C = [C Ccedilla];
-  @_L__D1 = [D Dcroat Eth];
-  @_L__H = [Eng H Hbar N Ncommaaccent bar four];
-  @_L__I = [I Iogonek];
-  @_L__J = [J O Q nine zero];
-  @_L__K1 = [K Kcommaaccent];
-  @_L__L1 = [L Lcommaaccent];
-  @_L__M = [M one seven];
-  @_L__S1 = [S Scedilla Scommaaccent six];
-  @_L__T1 = [T Tcommaaccent];
-  @_L__U = [U Uogonek W];
-  @_L__a1 = [a aogonek];
-  @_L__c = [c ccedilla];
-  @_L__d1 = [d dcaron];
-  @_L__f1 = [f florin];
-  @_L__g = [eng g m n ncommaaccent q];
-  @_L__h = [h hbar hcircumflex];
-  @_L__i1 = [i iacute ibreve icircumflex];
-  @_L__j = [j u uogonek w];
-  @_L__k = [k kcommaaccent];
-  @_L__l = [l lacute lcaron lcommaaccent ldot];
-  @_L__r = [r rcommaaccent];
-  @_L__s = [s scedilla scommaaccent];
-  @_L__t = [t tcaron tcommaaccent];
-  @_L__y = [dotlessi y];
-  @_R__T = [T Tcommaaccent one];
-  @_R__a = [a ae aogonek c ccedilla e eogonek o oe q];
-  @_R__t = [t tcaron tcommaaccent];
-  @_R__u = [u uogonek];
-  @_R__I = [I Iogonek];
-  @_R__s = [s scedilla scommaaccent];
-  @_R__m = [dotlessi eng m n ncommaaccent w];
-  @_R__A = [A AE Aogonek];
-  @_R__B = [B C Ccedilla E Eogonek Euro G Gcommaaccent O OE Q six zero];
-  @_R__d = [d dcaron eth];
-  @_R__f = [f florin germandbls h hbar hcircumflex k kcommaaccent l lacute lcaron lcommaaccent ldot thorn];
-  @_R__D = [D Dcroat Eng Eth F H Hbar N Ncommaaccent Thorn afii61352 bar franc];
-  @_R__K = [K Kcommaaccent M P R Rcommaaccent peseta];
-  @_R__S = [S Scedilla Scommaaccent nine];
-  @_R__i = [i ibreve icircumflex igrave];
-  @_R__L = [L Lcommaaccent U Uogonek W];
-
-  lookup KERN_LTR  {
-  lookupflag IgnoreMarks;
-    pos A C -10;
-    pos A V -20;
-    pos A X -40;
-    pos A Y -50;
-    pos A k -20;
-    pos A v -20;
-    pos A w -20;
-    pos A x -20;
-    pos A y -20;
-    pos A z -20;
-    pos B V -20;
-    pos B X -40;
-    pos B Y -40;
-    pos B g -20;
-    pos B v -30;
-    pos C V -20;
-    pos C X -30;
-    pos C Y -30;
-    pos C x -30;
-    pos D J -20;
-    pos D M -20;
-    pos D V -20;
-    pos D X -50;
-    pos D Y -60;
-    pos D v -30;
-    pos D x -30;
-    pos D y -20;
-    pos D z -20;
-    pos Dcroat J -20;
-    pos Dcroat M -20;
-    pos Dcroat V -20;
-    pos Dcroat X -50;
-    pos Dcroat Y -60;
-    pos Dcroat v -30;
-    pos Dcroat x -30;
-    pos Dcroat y -20;
-    pos Dcroat z -20;
-    pos Eth J -20;
-    pos Eth M -20;
-    pos Eth V -20;
-    pos Eth X -50;
-    pos Eth Y -60;
-    pos Eth v -30;
-    pos Eth x -30;
-    pos Eth y -20;
-    pos Eth z -20;
-    pos F A -60;
-    pos F AE -60;
-    pos F B -20;
-    pos F C -20;
-    pos F D -20;
-    pos F Dcroat -20;
-    pos F Eth -20;
-    pos F E -20;
-    pos F F -20;
-    pos F G -20;
-    pos F H -20;
-    pos F Hbar -20;
-    pos F I -30;
-    pos F J -90;
-    pos F K -40;
-    pos F L -20;
-    pos F M -30;
-    pos F N -20;
-    pos F Eng -20;
-    pos F O -20;
-    pos F OE -20;
-    pos F P -30;
-    pos F Thorn -20;
-    pos F Q -20;
-    pos F R -40;
-    pos F S -10;
-    pos F U -20;
-    pos F V -20;
-    pos F W -20;
-    pos F X -40;
-    pos F Y -30;
-    pos F Z -20;
-    pos F a -100;
-    pos F ae -100;
-    pos F b -30;
-    pos F c -100;
-    pos F d -100;
-    pos F e -100;
-    pos F f -40;
-    pos F g -110;
-    pos F h -30;
-    pos F hbar -40;
-    pos F dotlessi -50;
-    pos F j -200;
-    pos F k -30;
-    pos F l -40;
-    pos F m -50;
-    pos F n -50;
-    pos F eng -50;
-    pos F o -100;
-    pos F oe -100;
-    pos F thorn -40;
-    pos F q -100;
-    pos F r -100;
-    pos F s -100;
-    pos F germandbls -40;
-    pos F u -60;
-    pos F v -70;
-    pos F w -80;
-    pos F x -90;
-    pos F y -90;
-    pos F z -90;
-    pos F zero -20;
-    pos F six -20;
-    pos F nine -10;
-    pos F florin -40;
-    pos F bar -20;
-    pos F afii61352 -20;
-    pos F Euro -20;
-    pos F franc -20;
-    pos F peseta -40;
-    pos F Ccedilla -20;
-    pos F ccedilla -100;
-    pos F eth -100;
-    pos F Aogonek -60;
-    pos F aogonek -100;
-    pos F Eogonek -20;
-    pos F eogonek -100;
-    pos F dcaron -100;
-    pos F Gcommaaccent -20;
-    pos F hcircumflex -40;
-    pos F Iogonek -30;
-    pos F Kcommaaccent -40;
-    pos F kcommaaccent -40;
-    pos F lacute -40;
-    pos F Lcommaaccent -20;
-    pos F lcommaaccent -40;
-    pos F lcaron -40;
-    pos F ldot -40;
-    pos F Ncommaaccent -20;
-    pos F ncommaaccent -50;
-    pos F Rcommaaccent -40;
-    pos F Scedilla -10;
-    pos F scedilla -100;
-    pos F Uogonek -20;
-    pos F uogonek -60;
-    pos F Scommaaccent -10;
-    pos F scommaaccent -100;
-    pos H Y -20;
-    pos H g -30;
-    pos Hbar Y -20;
-    pos Hbar g -30;
-    pos I C -20;
-    pos I r -30;
-    pos J X -30;
-    pos J Y -20;
-    pos K V -20;
-    pos K Y -30;
-    pos K g -40;
-    pos K v -40;
-    pos K y -30;
-    pos K z -30;
-    pos L C -30;
-    pos L X -50;
-    pos L Y -120;
-    pos L c -20;
-    pos L h -40;
-    pos L v -100;
-    pos L x -40;
-    pos M X -20;
-    pos M Y -30;
-    pos N Y -20;
-    pos N g -30;
-    pos Eng Y -20;
-    pos Eng g -30;
-    pos O X -30;
-    pos O Y -20;
-    pos P A -30;
-    pos P AE -30;
-    pos P T -20;
-    pos P V -20;
-    pos P W -20;
-    pos P X -40;
-    pos P Y -30;
-    pos P a -30;
-    pos P ae -30;
-    pos P c -30;
-    pos P d -20;
-    pos P e -30;
-    pos P f -20;
-    pos P h -20;
-    pos P hbar -20;
-    pos P dotlessi -20;
-    pos P k -20;
-    pos P l -20;
-    pos P m -20;
-    pos P n -20;
-    pos P eng -20;
-    pos P o -30;
-    pos P oe -30;
-    pos P thorn -20;
-    pos P q -30;
-    pos P r -30;
-    pos P s -30;
-    pos P germandbls -20;
-    pos P t -20;
-    pos P u -20;
-    pos P v -30;
-    pos P w -20;
-    pos P y -20;
-    pos P z -20;
-    pos P one -20;
-    pos P florin -20;
-    pos P ccedilla -30;
-    pos P eth -20;
-    pos P Aogonek -30;
-    pos P aogonek -30;
-    pos P eogonek -30;
-    pos P dcaron -20;
-    pos P hcircumflex -20;
-    pos P kcommaaccent -20;
-    pos P lacute -20;
-    pos P lcommaaccent -20;
-    pos P lcaron -20;
-    pos P ldot -20;
-    pos P ncommaaccent -20;
-    pos P scedilla -30;
-    pos P tcaron -20;
-    pos P uogonek -20;
-    pos P scommaaccent -30;
-    pos P Tcommaaccent -20;
-    pos P tcommaaccent -20;
-    pos Q X -30;
-    pos Q Y -20;
-    pos S V -20;
-    pos S X -40;
-    pos S Y -30;
-    pos S b -20;
-    pos S c -20;
-    pos S g -20;
-    pos T U -30;
-    pos T V -40;
-    pos T X -60;
-    pos T Y -40;
-    pos T b -20;
-    pos T g -100;
-    pos T r -100;
-    pos T w -60;
-    pos T y -80;
-    pos T z -50;
-    pos U M -20;
-    pos U Y -30;
-    pos V A -30;
-    pos V AE -30;
-    pos V M -20;
-    pos V S -10;
-    pos V T -20;
-    pos V a -40;
-    pos V ae -40;
-    pos V b -20;
-    pos V c -30;
-    pos V d -30;
-    pos V e -40;
-    pos V g -30;
-    pos V dotlessi -20;
-    pos V k -20;
-    pos V m -20;
-    pos V n -20;
-    pos V eng -20;
-    pos V o -40;
-    pos V oe -40;
-    pos V q -40;
-    pos V r -20;
-    pos V s -30;
-    pos V u -20;
-    pos V v -10;
-    pos V w -20;
-    pos V x -20;
-    pos V y -20;
-    pos V z -20;
-    pos V one -20;
-    pos V nine -10;
-    pos V ccedilla -40;
-    pos V eth -30;
-    pos V Aogonek -30;
-    pos V aogonek -40;
-    pos V eogonek -40;
-    pos V dcaron -30;
-    pos V ncommaaccent -20;
-    pos V Scedilla -10;
-    pos V scedilla -30;
-    pos V uogonek -20;
-    pos V Scommaaccent -10;
-    pos V scommaaccent -30;
-    pos V Tcommaaccent -20;
-    pos W A -20;
-    pos W AE -20;
-    pos W M -20;
-    pos W T -40;
-    pos W Y -20;
-    pos W a -30;
-    pos W ae -30;
-    pos W c -20;
-    pos W e -30;
-    pos W g -20;
-    pos W o -30;
-    pos W oe -30;
-    pos W q -30;
-    pos W t -30;
-    pos W u -20;
-    pos W z -20;
-    pos W one -40;
-    pos W ccedilla -30;
-    pos W Aogonek -20;
-    pos W aogonek -30;
-    pos W eogonek -30;
-    pos W tcaron -30;
-    pos W uogonek -20;
-    pos W Tcommaaccent -40;
-    pos W tcommaaccent -30;
-    pos X A -40;
-    pos X AE -40;
-    pos X B -30;
-    pos X C -40;
-    pos X E -30;
-    pos X G -30;
-    pos X O -30;
-    pos X OE -30;
-    pos X Q -30;
-    pos X S -30;
-    pos X T -40;
-    pos X V -20;
-    pos X a -70;
-    pos X ae -70;
-    pos X c -60;
-    pos X e -70;
-    pos X g -30;
-    pos X dotlessi -20;
-    pos X m -20;
-    pos X n -20;
-    pos X eng -20;
-    pos X o -70;
-    pos X oe -70;
-    pos X q -70;
-    pos X r -20;
-    pos X s -30;
-    pos X w -20;
-    pos X x -20;
-    pos X y -20;
-    pos X z -20;
-    pos X zero -30;
-    pos X one -40;
-    pos X six -30;
-    pos X nine -30;
-    pos X Euro -30;
-    pos X Ccedilla -30;
-    pos X ccedilla -70;
-    pos X Aogonek -40;
-    pos X aogonek -70;
-    pos X Eogonek -30;
-    pos X eogonek -70;
-    pos X Gcommaaccent -30;
-    pos X ncommaaccent -20;
-    pos X Scedilla -30;
-    pos X scedilla -30;
-    pos X Scommaaccent -30;
-    pos X scommaaccent -30;
-    pos X Tcommaaccent -40;
-    pos Y A -50;
-    pos Y AE -50;
-    pos Y B -20;
-    pos Y C -30;
-    pos Y E -20;
-    pos Y G -20;
-    pos Y H -20;
-    pos Y I -20;
-    pos Y K -30;
-    pos Y L -20;
-    pos Y M -20;
-    pos Y O -20;
-    pos Y OE -20;
-    pos Y P -30;
-    pos Y Q -20;
-    pos Y R -30;
-    pos Y S -20;
-    pos Y U -20;
-    pos Y V -30;
-    pos Y W -20;
-    pos Y X -20;
-    pos Y Z -20;
-    pos Y a -70;
-    pos Y ae -70;
-    pos Y c -80;
-    pos Y d -80;
-    pos Y e -70;
-    pos Y g -90;
-    pos Y dotlessi -50;
-    pos Y j -160;
-    pos Y k -40;
-    pos Y m -50;
-    pos Y n -50;
-    pos Y eng -50;
-    pos Y o -70;
-    pos Y oe -70;
-    pos Y q -70;
-    pos Y s -100;
-    pos Y t -50;
-    pos Y u -70;
-    pos Y v -70;
-    pos Y w -70;
-    pos Y x -70;
-    pos Y y -50;
-    pos Y z -60;
-    pos Y zero -20;
-    pos Y six -20;
-    pos Y nine -20;
-    pos Y Euro -20;
-    pos Y peseta -30;
-    pos Y Ccedilla -20;
-    pos Y ccedilla -70;
-    pos Y eth -80;
-    pos Y Aogonek -50;
-    pos Y aogonek -70;
-    pos Y Eogonek -20;
-    pos Y eogonek -70;
-    pos Y dcaron -80;
-    pos Y Gcommaaccent -20;
-    pos Y Iogonek -20;
-    pos Y Kcommaaccent -30;
-    pos Y Lcommaaccent -20;
-    pos Y ncommaaccent -50;
-    pos Y Rcommaaccent -30;
-    pos Y Scedilla -20;
-    pos Y scedilla -100;
-    pos Y tcaron -50;
-    pos Y Uogonek -20;
-    pos Y uogonek -70;
-    pos Y Scommaaccent -20;
-    pos Y scommaaccent -100;
-    pos Y tcommaaccent -50;
-    pos Z T -20;
-    pos Z V -30;
-    pos Z a -40;
-    pos Z ae -40;
-    pos Z c -40;
-    pos Z e -40;
-    pos Z dotlessi -20;
-    pos Z m -20;
-    pos Z n -20;
-    pos Z eng -20;
-    pos Z o -40;
-    pos Z oe -40;
-    pos Z q -40;
-    pos Z r -20;
-    pos Z s -20;
-    pos Z t -40;
-    pos Z u -20;
-    pos Z v -30;
-    pos Z w -20;
-    pos Z x -20;
-    pos Z y -20;
-    pos Z z -20;
-    pos Z one -20;
-    pos Z ccedilla -40;
-    pos Z aogonek -40;
-    pos Z eogonek -40;
-    pos Z ncommaaccent -20;
-    pos Z scedilla -20;
-    pos Z tcaron -40;
-    pos Z uogonek -20;
-    pos Z scommaaccent -20;
-    pos Z Tcommaaccent -20;
-    pos Z tcommaaccent -40;
-    pos a F -50;
-    pos a J -60;
-    pos a M -40;
-    pos a P -40;
-    pos a V -100;
-    pos a W -30;
-    pos a X -50;
-    pos a Y -200;
-    pos a b -50;
-    pos a g -50;
-    pos a h -30;
-    pos a j -60;
-    pos a k -40;
-    pos a l -30;
-    pos a v -90;
-    pos a x -40;
-    pos a y -70;
-    pos a z -30;
-    pos b S -20;
-    pos b T -120;
-    pos b V -30;
-    pos b Y -100;
-    pos b a -20;
-    pos b ae -20;
-    pos b c -20;
-    pos b e -20;
-    pos b g -20;
-    pos b dotlessi -10;
-    pos b l -20;
-    pos b m -10;
-    pos b n -10;
-    pos b eng -10;
-    pos b o -20;
-    pos b oe -20;
-    pos b q -20;
-    pos b r -20;
-    pos b s -20;
-    pos b t -50;
-    pos b v -40;
-    pos b w -30;
-    pos b x -30;
-    pos b y -20;
-    pos b one -120;
-    pos b nine -20;
-    pos b ccedilla -20;
-    pos b aogonek -20;
-    pos b eogonek -20;
-    pos b ncommaaccent -10;
-    pos b Scedilla -20;
-    pos b scedilla -20;
-    pos b tcaron -50;
-    pos b Scommaaccent -20;
-    pos b scommaaccent -20;
-    pos b Tcommaaccent -120;
-    pos b tcommaaccent -50;
-    pos c J -30;
-    pos c V -30;
-    pos c X -60;
-    pos c Y -100;
-    pos c g -30;
-    pos c v -30;
-    pos c x -30;
-    pos c y -30;
-    pos d Y -20;
-    pos d b -20;
-    pos d g -20;
-    pos d j -20;
-    pos d r -20;
-    pos d v -30;
-    pos d x -20;
-    pos d y -20;
-    pos d z -20;
-    pos f V -40;
-    pos f Y -70;
-    pos f b -30;
-    pos f g -100;
-    pos f h -30;
-    pos f j -190;
-    pos f k -60;
-    pos f l -50;
-    pos f r -110;
-    pos f v -70;
-    pos f w -50;
-    pos f x -80;
-    pos f y -80;
-    pos f z -60;
-    pos g V -30;
-    pos g Y -100;
-    pos g b -20;
-    pos g c -20;
-    pos g g -20;
-    pos g j -20;
-    pos g v -40;
-    pos h V -20;
-    pos h Y -100;
-    pos h c -30;
-    pos h g -20;
-    pos h v -30;
-    pos h w -20;
-    pos h x -30;
-    pos h y -20;
-    pos hbar V -20;
-    pos hbar Y -100;
-    pos hbar c -30;
-    pos hbar g -20;
-    pos hbar v -30;
-    pos hbar w -20;
-    pos hbar x -30;
-    pos hbar y -20;
-    pos i V -20;
-    pos i Y -30;
-    pos i b -10;
-    pos i g -20;
-    pos i j -20;
-    pos i y -20;
-    pos i z -10;
-    pos dotlessi Y -100;
-    pos ibreve V -20;
-    pos ibreve Y -30;
-    pos ibreve b -10;
-    pos ibreve g -20;
-    pos ibreve j -20;
-    pos ibreve y -20;
-    pos ibreve z -10;
-    pos j Y -100;
-    pos j g -20;
-    pos j h -30;
-    pos j r -20;
-    pos k b -10;
-    pos k c -50;
-    pos k g -10;
-    pos k r -20;
-    pos k v -30;
-    pos k y -20;
-    pos k z -20;
-    pos l c -30;
-    pos l g -20;
-    pos l k -30;
-    pos l r -10;
-    pos l v -30;
-    pos l x -20;
-    pos l y -20;
-    pos m V -30;
-    pos m Y -100;
-    pos m a -10;
-    pos m ae -10;
-    pos m b -20;
-    pos m c -20;
-    pos m e -10;
-    pos m g -20;
-    pos m j -20;
-    pos m o -10;
-    pos m oe -10;
-    pos m q -10;
-    pos m v -40;
-    pos m ccedilla -10;
-    pos m aogonek -10;
-    pos m eogonek -10;
-    pos n V -30;
-    pos n Y -100;
-    pos n b -20;
-    pos n c -20;
-    pos n g -20;
-    pos n j -20;
-    pos n v -40;
-    pos eng V -30;
-    pos eng Y -100;
-    pos eng b -20;
-    pos eng c -20;
-    pos eng g -20;
-    pos eng j -20;
-    pos eng v -40;
-    pos q V -30;
-    pos q Y -100;
-    pos q b -20;
-    pos q c -20;
-    pos q g -20;
-    pos q j -20;
-    pos q v -40;
-    pos r V -30;
-    pos r Y -100;
-    pos r b -20;
-    pos r c -20;
-    pos r g -20;
-    pos r k -20;
-    pos r l -20;
-    pos r r -30;
-    pos r v -20;
-    pos r w -20;
-    pos r x -20;
-    pos r y -20;
-    pos r z -20;
-    pos s V -20;
-    pos s Y -90;
-    pos s b -30;
-    pos s g -20;
-    pos s r -20;
-    pos s v -20;
-    pos s w -10;
-    pos s x -10;
-    pos s y -20;
-    pos s z -20;
-    pos t W -20;
-    pos t Y -100;
-    pos t b -20;
-    pos t c -20;
-    pos t g -30;
-    pos t j -20;
-    pos t v -70;
-    pos t w -30;
-    pos t x -30;
-    pos t z -20;
-    pos u V -20;
-    pos u X -60;
-    pos u Y -100;
-    pos u a -20;
-    pos u ae -20;
-    pos u c -10;
-    pos u e -20;
-    pos u g -10;
-    pos u h -30;
-    pos u o -20;
-    pos u oe -20;
-    pos u q -20;
-    pos u r -10;
-    pos u s -10;
-    pos u u -20;
-    pos u v -20;
-    pos u ccedilla -20;
-    pos u aogonek -20;
-    pos u eogonek -20;
-    pos u scedilla -10;
-    pos u uogonek -20;
-    pos u scommaaccent -10;
-    pos v B -20;
-    pos v C -20;
-    pos v E -20;
-    pos v G -20;
-    pos v J -40;
-    pos v O -20;
-    pos v OE -20;
-    pos v Q -20;
-    pos v T -70;
-    pos v V -20;
-    pos v Y -100;
-    pos v a -40;
-    pos v ae -40;
-    pos v b -30;
-    pos v c -30;
-    pos v d -40;
-    pos v e -40;
-    pos v g -20;
-    pos v h -30;
-    pos v i -20;
-    pos v dotlessi -20;
-    pos v ibreve -20;
-    pos v j -40;
-    pos v k -10;
-    pos v l -20;
-    pos v m -20;
-    pos v n -20;
-    pos v eng -20;
-    pos v o -40;
-    pos v oe -40;
-    pos v q -40;
-    pos v s -20;
-    pos v t -30;
-    pos v u -20;
-    pos v v -20;
-    pos v w -20;
-    pos v x -20;
-    pos v y -20;
-    pos v z -20;
-    pos v zero -20;
-    pos v one -70;
-    pos v six -20;
-    pos v Euro -20;
-    pos v Ccedilla -20;
-    pos v ccedilla -40;
-    pos v igrave -20;
-    pos v eth -40;
-    pos v icircumflex -20;
-    pos v aogonek -40;
-    pos v Eogonek -20;
-    pos v eogonek -40;
-    pos v dcaron -40;
-    pos v Gcommaaccent -20;
-    pos v ncommaaccent -20;
-    pos v scedilla -20;
-    pos v tcaron -30;
-    pos v uogonek -20;
-    pos v scommaaccent -20;
-    pos v Tcommaaccent -70;
-    pos v tcommaaccent -30;
-    pos w V -20;
-    pos w Y -100;
-    pos w a -30;
-    pos w ae -30;
-    pos w b -20;
-    pos w c -20;
-    pos w e -30;
-    pos w f -10;
-    pos w g -10;
-    pos w h -20;
-    pos w hbar -10;
-    pos w j -20;
-    pos w k -10;
-    pos w l -10;
-    pos w o -30;
-    pos w oe -30;
-    pos w thorn -10;
-    pos w q -30;
-    pos w r -20;
-    pos w s -10;
-    pos w germandbls -10;
-    pos w t -30;
-    pos w u -30;
-    pos w z -10;
-    pos w florin -10;
-    pos w ccedilla -30;
-    pos w aogonek -30;
-    pos w eogonek -30;
-    pos w hcircumflex -10;
-    pos w kcommaaccent -10;
-    pos w lacute -10;
-    pos w lcommaaccent -10;
-    pos w lcaron -10;
-    pos w ldot -10;
-    pos w scedilla -10;
-    pos w tcaron -30;
-    pos w uogonek -30;
-    pos w scommaaccent -10;
-    pos w tcommaaccent -30;
-    pos x B -20;
-    pos x C -20;
-    pos x E -20;
-    pos x G -20;
-    pos x O -20;
-    pos x OE -20;
-    pos x Q -20;
-    pos x T -120;
-    pos x V -20;
-    pos x Y -100;
-    pos x a -50;
-    pos x ae -50;
-    pos x b -20;
-    pos x c -50;
-    pos x d -20;
-    pos x e -50;
-    pos x f -20;
-    pos x h -30;
-    pos x hbar -20;
-    pos x k -20;
-    pos x l -20;
-    pos x o -50;
-    pos x oe -50;
-    pos x thorn -20;
-    pos x q -50;
-    pos x germandbls -20;
-    pos x t -30;
-    pos x u -20;
-    pos x v -20;
-    pos x w -20;
-    pos x y -20;
-    pos x z -20;
-    pos x zero -20;
-    pos x one -120;
-    pos x six -20;
-    pos x florin -20;
-    pos x Euro -20;
-    pos x Ccedilla -20;
-    pos x ccedilla -50;
-    pos x eth -20;
-    pos x aogonek -50;
-    pos x Eogonek -20;
-    pos x eogonek -50;
-    pos x dcaron -20;
-    pos x Gcommaaccent -20;
-    pos x hcircumflex -20;
-    pos x kcommaaccent -20;
-    pos x lacute -20;
-    pos x lcommaaccent -20;
-    pos x lcaron -20;
-    pos x ldot -20;
-    pos x tcaron -30;
-    pos x uogonek -20;
-    pos x Tcommaaccent -120;
-    pos x tcommaaccent -30;
-    pos y Y -100;
-    pos z B -20;
-    pos z C -20;
-    pos z E -20;
-    pos z G -20;
-    pos z O -20;
-    pos z OE -20;
-    pos z Q -20;
-    pos z T -120;
-    pos z Y -100;
-    pos z a -20;
-    pos z ae -20;
-    pos z c -30;
-    pos z d -20;
-    pos z e -20;
-    pos z g -30;
-    pos z o -20;
-    pos z oe -20;
-    pos z q -20;
-    pos z s -30;
-    pos z u -30;
-    pos z v -20;
-    pos z w -20;
-    pos z z -10;
-    pos z zero -20;
-    pos z one -120;
-    pos z six -20;
-    pos z Euro -20;
-    pos z Ccedilla -20;
-    pos z ccedilla -20;
-    pos z eth -20;
-    pos z aogonek -20;
-    pos z Eogonek -20;
-    pos z eogonek -20;
-    pos z dcaron -20;
-    pos z Gcommaaccent -20;
-    pos z scedilla -30;
-    pos z uogonek -30;
-    pos z scommaaccent -30;
-    pos z Tcommaaccent -120;
-    pos zero X -30;
-    pos zero Y -20;
-    pos one X -20;
-    pos one Y -30;
-    pos three V -20;
-    pos three X -40;
-    pos three Y -40;
-    pos three g -20;
-    pos three v -30;
-    pos four Y -20;
-    pos four g -30;
-    pos six V -20;
-    pos six X -40;
-    pos six Y -30;
-    pos six b -20;
-    pos six c -20;
-    pos six g -20;
-    pos seven X -20;
-    pos seven Y -30;
-    pos eight V -20;
-    pos eight X -40;
-    pos eight Y -40;
-    pos eight g -20;
-    pos eight v -30;
-    pos nine X -30;
-    pos nine Y -20;
-    pos florin V -40;
-    pos florin Y -70;
-    pos florin b -30;
-    pos florin g -100;
-    pos florin h -30;
-    pos florin j -190;
-    pos florin k -60;
-    pos florin l -50;
-    pos florin r -110;
-    pos florin v -70;
-    pos florin w -50;
-    pos florin x -80;
-    pos florin y -80;
-    pos florin z -60;
-    pos bar Y -20;
-    pos bar g -30;
-    pos Ccedilla V -20;
-    pos Ccedilla X -30;
-    pos Ccedilla Y -30;
-    pos Ccedilla x -30;
-    pos ccedilla J -30;
-    pos ccedilla V -30;
-    pos ccedilla X -60;
-    pos ccedilla Y -100;
-    pos ccedilla g -30;
-    pos ccedilla v -30;
-    pos ccedilla x -30;
-    pos ccedilla y -30;
-    pos iacute V -20;
-    pos iacute Y -30;
-    pos iacute b -10;
-    pos iacute g -20;
-    pos iacute j -20;
-    pos iacute y -20;
-    pos iacute z -10;
-    pos icircumflex V -20;
-    pos icircumflex Y -30;
-    pos icircumflex b -10;
-    pos icircumflex g -20;
-    pos icircumflex j -20;
-    pos icircumflex y -20;
-    pos icircumflex z -10;
-    pos Aogonek C -10;
-    pos Aogonek V -20;
-    pos Aogonek X -40;
-    pos Aogonek Y -50;
-    pos Aogonek k -20;
-    pos Aogonek v -20;
-    pos Aogonek w -20;
-    pos Aogonek x -20;
-    pos Aogonek y -20;
-    pos Aogonek z -20;
-    pos aogonek F -50;
-    pos aogonek J -60;
-    pos aogonek M -40;
-    pos aogonek P -40;
-    pos aogonek V -100;
-    pos aogonek W -30;
-    pos aogonek X -50;
-    pos aogonek Y -200;
-    pos aogonek b -50;
-    pos aogonek g -50;
-    pos aogonek h -30;
-    pos aogonek j -60;
-    pos aogonek k -40;
-    pos aogonek l -30;
-    pos aogonek v -90;
-    pos aogonek x -40;
-    pos aogonek y -70;
-    pos aogonek z -30;
-    pos dcaron Y -20;
-    pos dcaron b -20;
-    pos dcaron g -20;
-    pos dcaron j -20;
-    pos dcaron r -20;
-    pos dcaron v -30;
-    pos dcaron x -20;
-    pos dcaron y -20;
-    pos dcaron z -20;
-    pos hcircumflex V -20;
-    pos hcircumflex Y -100;
-    pos hcircumflex c -30;
-    pos hcircumflex g -20;
-    pos hcircumflex v -30;
-    pos hcircumflex w -20;
-    pos hcircumflex x -30;
-    pos hcircumflex y -20;
-    pos Iogonek C -20;
-    pos Iogonek r -30;
-    pos Kcommaaccent V -20;
-    pos Kcommaaccent Y -30;
-    pos Kcommaaccent g -40;
-    pos Kcommaaccent v -40;
-    pos Kcommaaccent y -30;
-    pos Kcommaaccent z -30;
-    pos kcommaaccent b -10;
-    pos kcommaaccent c -50;
-    pos kcommaaccent g -10;
-    pos kcommaaccent r -20;
-    pos kcommaaccent v -30;
-    pos kcommaaccent y -20;
-    pos kcommaaccent z -20;
-    pos lacute c -30;
-    pos lacute g -20;
-    pos lacute k -30;
-    pos lacute r -10;
-    pos lacute v -30;
-    pos lacute x -20;
-    pos lacute y -20;
-    pos Lcommaaccent C -30;
-    pos Lcommaaccent X -50;
-    pos Lcommaaccent Y -120;
-    pos Lcommaaccent c -20;
-    pos Lcommaaccent h -40;
-    pos Lcommaaccent v -100;
-    pos Lcommaaccent x -40;
-    pos lcommaaccent c -30;
-    pos lcommaaccent g -20;
-    pos lcommaaccent k -30;
-    pos lcommaaccent r -10;
-    pos lcommaaccent v -30;
-    pos lcommaaccent x -20;
-    pos lcommaaccent y -20;
-    pos lcaron c -30;
-    pos lcaron g -20;
-    pos lcaron k -30;
-    pos lcaron r -10;
-    pos lcaron v -30;
-    pos lcaron x -20;
-    pos lcaron y -20;
-    pos ldot c -30;
-    pos ldot g -20;
-    pos ldot k -30;
-    pos ldot r -10;
-    pos ldot v -30;
-    pos ldot x -20;
-    pos ldot y -20;
-    pos Ncommaaccent Y -20;
-    pos Ncommaaccent g -30;
-    pos ncommaaccent V -30;
-    pos ncommaaccent Y -100;
-    pos ncommaaccent b -20;
-    pos ncommaaccent c -20;
-    pos ncommaaccent g -20;
-    pos ncommaaccent j -20;
-    pos ncommaaccent v -40;
-    pos rcommaaccent V -30;
-    pos rcommaaccent Y -100;
-    pos rcommaaccent b -20;
-    pos rcommaaccent c -20;
-    pos rcommaaccent g -20;
-    pos rcommaaccent k -20;
-    pos rcommaaccent l -20;
-    pos rcommaaccent r -30;
-    pos rcommaaccent v -20;
-    pos rcommaaccent w -20;
-    pos rcommaaccent x -20;
-    pos rcommaaccent y -20;
-    pos rcommaaccent z -20;
-    pos Scedilla V -20;
-    pos Scedilla X -40;
-    pos Scedilla Y -30;
-    pos Scedilla b -20;
-    pos Scedilla c -20;
-    pos Scedilla g -20;
-    pos scedilla V -20;
-    pos scedilla Y -90;
-    pos scedilla b -30;
-    pos scedilla g -20;
-    pos scedilla r -20;
-    pos scedilla v -20;
-    pos scedilla w -10;
-    pos scedilla x -10;
-    pos scedilla y -20;
-    pos scedilla z -20;
-    pos tcaron W -20;
-    pos tcaron Y -100;
-    pos tcaron b -20;
-    pos tcaron c -20;
-    pos tcaron g -30;
-    pos tcaron j -20;
-    pos tcaron v -70;
-    pos tcaron w -30;
-    pos tcaron x -30;
-    pos tcaron z -20;
-    pos Uogonek M -20;
-    pos Uogonek Y -30;
-    pos uogonek Y -100;
-    pos uogonek g -20;
-    pos uogonek h -30;
-    pos uogonek r -20;
-    pos Scommaaccent V -20;
-    pos Scommaaccent X -40;
-    pos Scommaaccent Y -30;
-    pos Scommaaccent b -20;
-    pos Scommaaccent c -20;
-    pos Scommaaccent g -20;
-    pos scommaaccent V -20;
-    pos scommaaccent Y -90;
-    pos scommaaccent b -30;
-    pos scommaaccent g -20;
-    pos scommaaccent r -20;
-    pos scommaaccent v -20;
-    pos scommaaccent w -10;
-    pos scommaaccent x -10;
-    pos scommaaccent y -20;
-    pos scommaaccent z -20;
-    pos Tcommaaccent U -30;
-    pos Tcommaaccent V -40;
-    pos Tcommaaccent X -60;
-    pos Tcommaaccent Y -40;
-    pos Tcommaaccent b -20;
-    pos Tcommaaccent g -100;
-    pos Tcommaaccent r -100;
-    pos Tcommaaccent w -60;
-    pos Tcommaaccent y -80;
-    pos Tcommaaccent z -50;
-    pos tcommaaccent W -20;
-    pos tcommaaccent Y -100;
-    pos tcommaaccent b -20;
-    pos tcommaaccent c -20;
-    pos tcommaaccent g -30;
-    pos tcommaaccent j -20;
-    pos tcommaaccent v -70;
-    pos tcommaaccent w -30;
-    pos tcommaaccent x -30;
-    pos tcommaaccent z -20;
-  subtable;
-    pos @_L__A1 @_R__T -60;
-    pos @_L__A1 @_R__a -20;
-    pos @_L__A1 @_R__t -20;
-    pos @_L__A1 @_R__u -20;
-    pos @_L__B1 @_R__T -40;
-    pos @_L__B1 @_R__a -20;
-    pos @_L__C @_R__T -30;
-    pos @_L__D1 @_R__I -50;
-    pos @_L__D1 @_R__T -50;
-    pos @_L__D1 @_R__s -10;
-    pos @_L__D1 @_R__t -50;
-    pos @_L__H @_R__T -30;
-    pos @_L__H @_R__a -20;
-    pos @_L__I @_R__a -50;
-    pos @_L__I @_R__m -30;
-    pos @_L__J @_R__T -20;
-    pos @_L__K1 @_R__A -20;
-    pos @_L__K1 @_R__B -30;
-    pos @_L__K1 @_R__T -40;
-    pos @_L__K1 @_R__a -50;
-    pos @_L__K1 @_R__u -30;
-    pos @_L__L1 @_R__T -120;
-    pos @_L__L1 @_R__a -30;
-    pos @_L__L1 @_R__d -20;
-    pos @_L__L1 @_R__f -20;
-    pos @_L__L1 @_R__s -20;
-    pos @_L__L1 @_R__t -100;
-    pos @_L__M @_R__A -10;
-    pos @_L__M @_R__t -20;
-    pos @_L__S1 @_R__T -20;
-    pos @_L__S1 @_R__a -30;
-    pos @_L__S1 @_R__d -20;
-    pos @_L__S1 @_R__t -40;
-    pos @_L__T1 @_R__A -40;
-    pos @_L__T1 @_R__B -30;
-    pos @_L__T1 @_R__D -30;
-    pos @_L__T1 @_R__K -40;
-    pos @_L__T1 @_R__S -20;
-    pos @_L__T1 @_R__T -60;
-    pos @_L__T1 @_R__a -100;
-    pos @_L__T1 @_R__d -100;
-    pos @_L__T1 @_R__f -30;
-    pos @_L__T1 @_R__i -30;
-    pos @_L__T1 @_R__m -40;
-    pos @_L__T1 @_R__s -100;
-    pos @_L__U @_R__A -30;
-    pos @_L__U @_R__T -30;
-    pos @_L__a1 @_R__A -40;
-    pos @_L__a1 @_R__B -70;
-    pos @_L__a1 @_R__L -60;
-    pos @_L__a1 @_R__S -30;
-    pos @_L__a1 @_R__T -130;
-    pos @_L__a1 @_R__a -50;
-    pos @_L__a1 @_R__d -50;
-    pos @_L__a1 @_R__f -50;
-    pos @_L__a1 @_R__i -30;
-    pos @_L__a1 @_R__m -30;
-    pos @_L__a1 @_R__s -30;
-    pos @_L__a1 @_R__t -110;
-    pos @_L__a1 @_R__u -40;
-    pos @_L__c @_R__B -30;
-    pos @_L__c @_R__S -20;
-    pos @_L__c @_R__T -120;
-    pos @_L__c @_R__a -30;
-    pos @_L__c @_R__d -20;
-    pos @_L__c @_R__f -20;
-    pos @_L__c @_R__s -20;
-    pos @_L__c @_R__t -50;
-    pos @_L__c @_R__u -20;
-    pos @_L__d1 @_R__S -20;
-    pos @_L__d1 @_R__a -20;
-    pos @_L__d1 @_R__d -20;
-    pos @_L__d1 @_R__f -20;
-    pos @_L__d1 @_R__m -20;
-    pos @_L__d1 @_R__s -20;
-    pos @_L__d1 @_R__t -40;
-    pos @_L__d1 @_R__u -20;
-    pos @_L__f1 @_R__B -50;
-    pos @_L__f1 @_R__S -40;
-    pos @_L__f1 @_R__a -100;
-    pos @_L__f1 @_R__d -100;
-    pos @_L__f1 @_R__m -70;
-    pos @_L__f1 @_R__s -100;
-    pos @_L__f1 @_R__t -90;
-    pos @_L__f1 @_R__u -50;
-    pos @_L__g @_R__B -20;
-    pos @_L__g @_R__S -20;
-    pos @_L__g @_R__T -120;
-    pos @_L__g @_R__a -30;
-    pos @_L__g @_R__d -20;
-    pos @_L__g @_R__f -20;
-    pos @_L__g @_R__s -20;
-    pos @_L__g @_R__t -40;
-    pos @_L__g @_R__u -20;
-    pos @_L__h @_R__B -30;
-    pos @_L__h @_R__S -20;
-    pos @_L__h @_R__T -100;
-    pos @_L__h @_R__a -20;
-    pos @_L__h @_R__d -20;
-    pos @_L__h @_R__s -20;
-    pos @_L__h @_R__t -40;
-    pos @_L__h @_R__u -20;
-    pos @_L__i1 @_R__B -20;
-    pos @_L__i1 @_R__T -30;
-    pos @_L__i1 @_R__a -20;
-    pos @_L__i1 @_R__m -20;
-    pos @_L__i1 @_R__t -30;
-    pos @_L__j @_R__B -20;
-    pos @_L__j @_R__T -120;
-    pos @_L__j @_R__d -20;
-    pos @_L__j @_R__t -40;
-    pos @_L__k @_R__B -20;
-    pos @_L__k @_R__a -60;
-    pos @_L__k @_R__d -50;
-    pos @_L__k @_R__f -20;
-    pos @_L__k @_R__m -20;
-    pos @_L__k @_R__s -20;
-    pos @_L__k @_R__t -40;
-    pos @_L__k @_R__u -20;
-    pos @_L__l @_R__a -20;
-    pos @_L__l @_R__m -20;
-    pos @_L__l @_R__s -20;
-    pos @_L__l @_R__t -30;
-    pos @_L__l @_R__u -20;
-    pos @_L__r @_R__B -10;
-    pos @_L__r @_R__S -10;
-    pos @_L__r @_R__T -120;
-    pos @_L__r @_R__a -30;
-    pos @_L__r @_R__d -30;
-    pos @_L__r @_R__m -30;
-    pos @_L__r @_R__s -20;
-    pos @_L__r @_R__u -20;
-    pos @_L__s @_R__B -20;
-    pos @_L__s @_R__T -120;
-    pos @_L__s @_R__a -20;
-    pos @_L__s @_R__s -20;
-    pos @_L__t @_R__T -120;
-    pos @_L__t @_R__a -30;
-    pos @_L__t @_R__d -20;
-    pos @_L__t @_R__f -20;
-    pos @_L__t @_R__m -20;
-    pos @_L__t @_R__s -20;
-    pos @_L__t @_R__t -70;
-    pos @_L__t @_R__u -20;
-    pos @_L__y @_R__B -20;
-    pos @_L__y @_R__T -120;
-    pos @_L__y @_R__d -20;
-  lookupflag 0;
-  } KERN_LTR;
-
-  lookup KERN_LTR;";
-tag = kern;
+automatic = 1;
+code = "lookupflag IgnoreMarks;
+sub f i by fi;
+sub f l by fl;
+";
+tag = liga;
 }
 );
 fontMaster = (
@@ -1565,54 +216,6 @@ value = 750;
 {
 name = winDescent;
 value = 393;
-},
-{
-name = underlineThickness;
-value = 50;
-},
-{
-name = underlinePosition;
-value = -75;
-},
-{
-name = strikeoutPosition;
-value = 250;
-},
-{
-name = strikeoutSize;
-value = 50;
-},
-{
-name = subscriptXOffset;
-value = 0;
-},
-{
-name = subscriptXSize;
-value = 700;
-},
-{
-name = subscriptYOffset;
-value = 140;
-},
-{
-name = subscriptYSize;
-value = 650;
-},
-{
-name = superscriptXOffset;
-value = 0;
-},
-{
-name = superscriptXSize;
-value = 700;
-},
-{
-name = superscriptYOffset;
-value = 477;
-},
-{
-name = superscriptYSize;
-value = 650;
 },
 {
 name = hheaAscender;
@@ -1700,6 +303,54 @@ pos = -190;
 size = -6;
 }
 );
+},
+{
+name = underlineThickness;
+value = 50;
+},
+{
+name = underlinePosition;
+value = -75;
+},
+{
+name = strikeoutPosition;
+value = 250;
+},
+{
+name = strikeoutSize;
+value = 50;
+},
+{
+name = subscriptXOffset;
+value = 0;
+},
+{
+name = subscriptXSize;
+value = 700;
+},
+{
+name = subscriptYOffset;
+value = 140;
+},
+{
+name = subscriptYSize;
+value = 650;
+},
+{
+name = superscriptXOffset;
+value = 0;
+},
+{
+name = superscriptXSize;
+value = 700;
+},
+{
+name = superscriptYOffset;
+value = 477;
+},
+{
+name = superscriptYSize;
+value = 650;
 }
 );
 guides = (
@@ -1762,54 +413,6 @@ name = winDescent;
 value = 562;
 },
 {
-name = underlineThickness;
-value = 50;
-},
-{
-name = underlinePosition;
-value = -75;
-},
-{
-name = strikeoutPosition;
-value = 250;
-},
-{
-name = strikeoutSize;
-value = 50;
-},
-{
-name = subscriptXOffset;
-value = 0;
-},
-{
-name = subscriptXSize;
-value = 700;
-},
-{
-name = subscriptYOffset;
-value = 140;
-},
-{
-name = subscriptYSize;
-value = 650;
-},
-{
-name = superscriptXOffset;
-value = 0;
-},
-{
-name = superscriptXSize;
-value = 700;
-},
-{
-name = superscriptYOffset;
-value = 477;
-},
-{
-name = superscriptYSize;
-value = 650;
-},
-{
 name = hheaAscender;
 value = 800;
 },
@@ -1895,6 +498,54 @@ pos = -190;
 size = -6;
 }
 );
+},
+{
+name = underlineThickness;
+value = 50;
+},
+{
+name = underlinePosition;
+value = -75;
+},
+{
+name = strikeoutPosition;
+value = 250;
+},
+{
+name = strikeoutSize;
+value = 50;
+},
+{
+name = subscriptXOffset;
+value = 0;
+},
+{
+name = subscriptXSize;
+value = 700;
+},
+{
+name = subscriptYOffset;
+value = 140;
+},
+{
+name = subscriptYSize;
+value = 650;
+},
+{
+name = superscriptXOffset;
+value = 0;
+},
+{
+name = superscriptXSize;
+value = 700;
+},
+{
+name = superscriptYOffset;
+value = 477;
+},
+{
+name = superscriptYSize;
+value = 650;
 }
 );
 guides = (
@@ -45340,6 +43991,7 @@ unicode = 772;
 {
 color = 9;
 glyphname = commaturnedabovecomb;
+lastChange = "2023-09-07 12:34:32 +0000";
 layers = (
 {
 associatedMasterId = "6CDB3465-C44F-49AC-BF84-14420C40CC8C";
@@ -45357,12 +44009,8 @@ width = 293;
 {
 anchors = (
 {
-name = _bottom;
-pos = (131,0);
-},
-{
 name = _top;
-pos = (150,631);
+pos = (150,434);
 }
 );
 layerId = "FEF53B85-F0C1-4BB8-A611-3AA340A355BB";
@@ -45370,18 +44018,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(108,-238,l),
-(108,-174,l),
-(108,-174,l),
-(108,-153,l),
-(64,-153,l),
-(64,-16,l),
-(191,-16,l),
-(191,-102,l),
-(235,-102,l),
-(235,-194,l),
-(191,-194,l),
-(191,-238,l)
+(191,698,l),
+(191,634,l),
+(191,635,l),
+(191,613,l),
+(235,613,l),
+(235,476,l),
+(108,476,l),
+(108,562,l),
+(64,562,l),
+(64,654,l),
+(108,654,l),
+(108,698,l)
 );
 }
 );
@@ -45390,12 +44038,8 @@ width = 300;
 {
 anchors = (
 {
-name = _bottom;
-pos = (142,0);
-},
-{
 name = _top;
-pos = (150,631);
+pos = (150,450);
 }
 );
 layerId = "6CDB3465-C44F-49AC-BF84-14420C40CC8C";
@@ -45403,18 +44047,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(122,-212,l),
-(122,-156,l),
-(168,-156,l),
-(168,-122,l),
-(77,-122,l),
-(77,-21,l),
-(178,-21,l),
-(178,-112,l),
-(223,-112,l),
-(223,-166,l),
-(178,-166,l),
-(178,-212,l)
+(178,702,l),
+(178,646,l),
+(132,646,l),
+(132,612,l),
+(223,612,l),
+(223,511,l),
+(122,511,l),
+(122,602,l),
+(77,602,l),
+(77,656,l),
+(122,656,l),
+(122,702,l)
 );
 }
 );
@@ -45426,16 +44070,13 @@ unicode = 786;
 {
 color = 9;
 glyphname = commaaccentcomb;
+lastChange = "2023-09-07 12:33:24 +0000";
 layers = (
 {
 anchors = (
 {
 name = _bottom;
 pos = (155,0);
-},
-{
-name = _top;
-pos = (150,631);
 }
 );
 layerId = "FEF53B85-F0C1-4BB8-A611-3AA340A355BB";
@@ -45445,7 +44086,7 @@ closed = 1;
 nodes = (
 (132,-238,l),
 (132,-174,l),
-(132,-174,l),
+(132,-173,l),
 (132,-153,l),
 (88,-153,l),
 (88,-16,l),
@@ -45477,10 +44118,6 @@ anchors = (
 {
 name = _bottom;
 pos = (153,0);
-},
-{
-name = _top;
-pos = (150,631);
 }
 );
 layerId = "6CDB3465-C44F-49AC-BF84-14420C40CC8C";
