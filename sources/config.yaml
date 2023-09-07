@@ -1,8 +1,8 @@
 sources:
-  - PixelySans.glyphs
+  - PixelifySans.glyphs
 axisOrder:
   - wght
-familyName: Pixely Sans
+familyName: Pixelify Sans
 stat:
   PixelySans[wght].ttf:
   - name: Weight
