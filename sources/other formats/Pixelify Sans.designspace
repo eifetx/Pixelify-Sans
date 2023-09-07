@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<designspace format="4.0">
+ <axes>
+  <axis default="400" name="weight" maximum="900" tag="wght" minimum="400">
+   <labelname xml:lang="en">Weight</labelname>
+  </axis>
+ </axes>
+ <sources>
+  <source name="Black" filename="masters/PixelifySans-Black.ufo" stylename="Regular" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="900"/>
+   </location>
+  </source>
+  <source name="Regular" filename="masters/PixelifySans-Regular.ufo" stylename="Regular" familyname="Pixelify Sans">
+   <lib copy="1"/>
+   <groups copy="1"/>
+   <info copy="1"/>
+   <features copy="1"/>
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </source>
+ </sources>
+ <lib>
+  <dict>
+   <key>GSDimensionPlugin.Dimensions</key>
+   <dict>
+    <key>1F4A5B8F-71A6-4186-92A0-28F5C6507669</key>
+    <dict>
+     <key>HH</key>
+     <integer>91</integer>
+     <key>HV</key>
+     <integer>275</integer>
+     <key>OH</key>
+     <integer>91</integer>
+     <key>OV</key>
+     <integer>92</integer>
+     <key>nV</key>
+     <integer>92</integer>
+     <key>oH</key>
+     <integer>91</integer>
+     <key>oV</key>
+     <integer>92</integer>
+     <key>tH</key>
+     <integer>92</integer>
+    </dict>
+    <key>50F7179F-C30E-4DB1-9C2F-C70FE433AA29</key>
+    <dict>
+     <key>HH</key>
+     <integer>91</integer>
+     <key>HV</key>
+     <integer>275</integer>
+     <key>OH</key>
+     <integer>91</integer>
+     <key>OV</key>
+     <integer>92</integer>
+     <key>nV</key>
+     <integer>92</integer>
+     <key>oH</key>
+     <integer>91</integer>
+     <key>oV</key>
+     <integer>92</integer>
+     <key>tH</key>
+     <integer>92</integer>
+    </dict>
+   </dict>
+  </dict>
+ </lib>
+ <instances>
+  <instance name="Regular" filename="instances/PixelifySans-Regular.ufo" stylename="Regular" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </instance>
+  <instance name="Medium" filename="instances/PixelifySans-Medium.ufo" stylename="Medium" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="500"/>
+   </location>
+  </instance>
+  <instance name="SemiBold" filename="instances/PixelifySans-SemiBold.ufo" stylename="SemiBold" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="600"/>
+   </location>
+  </instance>
+  <instance name="Bold" filename="instances/PixelifySans-Bold.ufo" stylename="Bold" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="700"/>
+   </location>
+  </instance>
+  <instance name="ExtraBold" filename="instances/PixelifySans-ExtraBold.ufo" stylename="ExtraBold" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="800"/>
+   </location>
+  </instance>
+  <instance name="Black" filename="instances/PixelifySans-Black.ufo" stylename="Black" familyname="Pixelify Sans">
+   <location>
+    <dimension name="weight" xvalue="900"/>
+   </location>
+  </instance>
+ </instances>
+</designspace>
