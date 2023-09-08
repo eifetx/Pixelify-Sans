@@ -4,7 +4,7 @@ axisOrder:
   - wght
 familyName: Pixelify Sans
 stat:
-  PixelySans[wght].ttf:
+  PixelifySans[wght].ttf:
   - name: Weight
     tag: wght
     values:
