@@ -414,7 +414,7 @@ visible = 1;
 },
 {
 axesValues = (
-900
+700
 );
 customParameters = (
 {
@@ -598,7 +598,7 @@ over = -6;
 pos = -190;
 }
 );
-name = Black;
+name = Bold;
 }
 );
 glyphs = (
@@ -92094,8 +92094,8 @@ axesValues = (
 500
 );
 instanceInterpolations = {
-"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.8;
-"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.2;
+"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.66667;
+"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.33333;
 };
 name = Medium;
 weightClass = 500;
@@ -92105,8 +92105,8 @@ axesValues = (
 600
 );
 instanceInterpolations = {
-"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.6;
-"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.4;
+"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.33333;
+"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.66667;
 };
 name = SemiBold;
 weightClass = 600;
@@ -92116,33 +92116,11 @@ axesValues = (
 700
 );
 instanceInterpolations = {
-"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.4;
-"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.6;
+"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 1;
 };
 isBold = 1;
 name = Bold;
 weightClass = 700;
-},
-{
-axesValues = (
-800
-);
-instanceInterpolations = {
-"6CDB3465-C44F-49AC-BF84-14420C40CC8C" = 0.2;
-"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 0.8;
-};
-name = ExtraBold;
-weightClass = 800;
-},
-{
-axesValues = (
-900
-);
-instanceInterpolations = {
-"FEF53B85-F0C1-4BB8-A611-3AA340A355BB" = 1;
-};
-name = Black;
-weightClass = 900;
 }
 );
 kerningLTR = {
