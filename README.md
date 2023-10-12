@@ -13,12 +13,7 @@ Overall, my Pixel Font product is a versatile and powerful tool for any designer
 
 
 ## ***Acknowledgements***
-Designed by Stefie Justprince / Typecalism Foundryline
-
-## ***Versions***
-V 1.000
-
-v 1.001 Fix diacritics, fix compose Glyph, fix slash Oslash oslash 
+Designed by Stefie Justprince / Typecalism Foundryline 
 
 ## ***License***
 This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
